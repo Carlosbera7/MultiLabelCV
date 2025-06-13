@@ -55,7 +55,6 @@ O script principal executa as seguintes etapas:
 Os resultados incluem:
 
 Exemplo das 5 primeiras linhas das Predições : 
-```
 ## Resultados da Validação Cruzada por Fold
 
 ### Quantidade de Exemplos Positivos por Rótulo
@@ -127,7 +126,6 @@ Exemplo das 5 primeiras linhas das Predições :
 - **Desvio Padrão do F1-Score**: 0.0124
 - **Menor número de exemplos positivos em um rótulo**: 11
 
-```
 
 
 
