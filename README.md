@@ -31,6 +31,10 @@ O experimento foi implementado em Python 3.6 utilizando as bibliotecas:
 - `iterstrat`
 
 ## Divisão
+
+Total 
+![image](https://github.com/user-attachments/assets/e785a454-9180-411b-ab92-a1236c7dbfe6)
+
 ![Figure_1](https://github.com/user-attachments/assets/68c0c1b8-f39d-49c1-abdc-1aa69297eabb)
 
 
