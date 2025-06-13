@@ -35,7 +35,8 @@ O experimento foi implementado em Python 3.6 utilizando as bibliotecas:
 - XGBoost
 
 ## Divisão
-![Divisao](https://github.com/user-attachments/assets/7da2dc03-7fc2-4680-8d21-094c31f174a9)
+![trieino_teste](https://github.com/user-attachments/assets/43ef6433-f974-4f3f-a71b-e1fe0ddece95)
+
 
 O script principal executa as seguintes etapas:
 1. Carregamento das partições salvas.
