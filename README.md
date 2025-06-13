@@ -35,9 +35,9 @@ O experimento foi implementado em Python 3.6 utilizando as bibliotecas:
 
 
 ## Estrutura do Repositório
-- [`Scripts/ClassificadorHierarquicoValido.py`](https://github.com/Carlosbera7/ClassificadorMultiLabel/blob/main/Script/ClassificadorHierarquicoValido.py): Script principal para executar o experimento.
-- [`Data/`](https://github.com/Carlosbera7/ClassificadorMultiLabel/tree/main/Data): Pasta contendo o conjunto de dados e o Embeddings GloVe pré-treinados (necessário para execução).
-- [`Execução`](https://musical-space-yodel-9rpvjvw9qr39vw4.github.dev/): O código pode ser executado diretamente no ambiente virtual.
+- [`Script/MultiLabelCV.py`](https://github.com/Carlosbera7/MultiLabelCV/blob/main/Script/MultiLabelCV.py): Script principal para executar o experimento.
+- [`Data/`](https://github.com/Carlosbera7/MultiLabelCV/tree/main/Data): Pasta contendo o conjunto de dados.
+
 
 ## Resultados da Validação Cruzada por Fold
 
