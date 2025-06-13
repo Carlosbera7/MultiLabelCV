@@ -122,9 +122,8 @@ Exemplo das 5 primeiras linhas das Predições :
 | Homossexuals         | 0.9074 | 0.8909 | 0.9369 | 0.8704 | 0.8870 |
 
 ### Estatísticas Gerais
-- **Macro F1-Score Médio**: 0.4325
-- **Desvio Padrão do F1-Score**: 0.0124
-- **Menor número de exemplos positivos em um rótulo**: 11
+![fold](https://github.com/user-attachments/assets/ef44e85f-b3ef-4032-8d80-a98bff89c77c)
+
 
 
 
