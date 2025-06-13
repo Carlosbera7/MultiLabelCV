@@ -1,4 +1,4 @@
-# Experimento: Classificação de Discurso de Ódio em Português XGBoost Multi-Label com Cross Validation de 10 Folds
+# Experimento: Classificação de Discurso de Ódio em Português XGBoost Multi-Label com Cross Validation de 5 Folds
 
 Este repositório contém a implementação do experimento utilizando Xgboost para Multi-Label adapatado de https://gabrielziegler3.medium.com/multiclass-multilabel-classification-with-xgboost-66195e4d9f2d. 
 
@@ -9,53 +9,36 @@ O experimento segue as etapas descritas no artigo:
    - O arquivo CSV 2019-05-28_portuguese_hate_speech_hierarchical_classification_reduzido.csv é carregado.
    - A coluna text é separada como as features (X), e as demais colunas são tratadas como rótulos (y).
 
-2. **Pré-processamento dos Rótulos**:
-     - Os rótulos (y) são convertidos para valores numéricos
-     - Valores inválidos ou fora do intervalo [0, 1] são substituídos por 0.
-     - Valores NaN são preenchidos com 0.
-     - Os rótulos são convertidos para inteiros e transformados em uma matriz NumPy.   
+2. **Limpeza de Texto:**:
+     - Remove caracteres especiais, converte para minúsculas e remove stop words em português.   
 
-3. **Vetorização do Texto**:
-   - O texto (X) é vetorizado usando TF-IDF com um limite de 5000 features.
-   - Stopwords em português são removidas utilizando a biblioteca NLTK.
+3. **Correção de Vazamento de Dados**:
+   - Vetorização com TfidfVectorizer é ajustada apenas nos dados de treino e transformada nos dados de teste.
       
-4. **Divisão dos Dados**:
-   - Os dados são divididos em conjuntos de treino e teste utilizando stratificação hierárquica com a função iterative_train_test_split da biblioteca scikit-multilearn.
-   - A distribuição das classes nos conjuntos de treino e teste é verificada.
+4. **Validação Cruzada Estratificada:**:
+   -Usa MultilabelStratifiedKFold para manter a distribuição dos rótulos em cada fold.
   
 5. **Treinamento do Modelo**:
-   - Um modelo XGBoost é treinado para cada rótulo (coluna de y).
-   - O modelo utiliza a função de objetivo binary:logistic para classificação binária.
+   - Utiliza a estratégia One-vs-Rest com XGBoost para cada rótulo individualmente.
      
 ## Implementação
 O experimento foi implementado em Python 3.6 utilizando as bibliotecas:
-- pandas
-- NLTK
-- Scikit-learn
-- XGBoost
+- `pandas`
+- `numpy`
+- `scikit-learn`
+- `xgboost`
+- `nltk`
+- `iterstrat`
 
 ## Divisão
 ![Figure_1](https://github.com/user-attachments/assets/68c0c1b8-f39d-49c1-abdc-1aa69297eabb)
 
-
-O script principal executa as seguintes etapas:
-1. Carregamento das partições salvas.
-2. Tokenização e padding das sequências de texto.
-3. Carregamento dos embeddings GloVe.
-4. Construção e treinamento do modelo LSTM.
-5. Extração das representações intermediárias.
-6. Treinamento e avaliação do XGBoost.
-7. Busca de hiperparâmetros com validação cruzada.
 
 ## Estrutura do Repositório
 - [`Scripts/ClassificadorHierarquicoValido.py`](https://github.com/Carlosbera7/ClassificadorMultiLabel/blob/main/Script/ClassificadorHierarquicoValido.py): Script principal para executar o experimento.
 - [`Data/`](https://github.com/Carlosbera7/ClassificadorMultiLabel/tree/main/Data): Pasta contendo o conjunto de dados e o Embeddings GloVe pré-treinados (necessário para execução).
 - [`Execução`](https://musical-space-yodel-9rpvjvw9qr39vw4.github.dev/): O código pode ser executado diretamente no ambiente virtual.
 
-## Resultados
-Os resultados incluem:
-
-Exemplo das 5 primeiras linhas das Predições : 
 ## Resultados da Validação Cruzada por Fold
 
 ### Quantidade de Exemplos Positivos por Rótulo
