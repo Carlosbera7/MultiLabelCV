@@ -1,6 +1,6 @@
 # Experimento: Classificação de Discurso de Ódio em Português XGBoost Multi-Label com Cross Validation de 5 Folds
 
-Este repositório contém a implementação do experimento utilizando Xgboost para Multi-Label adapatado de https://gabrielziegler3.medium.com/multiclass-multilabel-classification-with-xgboost-66195e4d9f2d. 
+Este repositório contém a implementação do experimento utilizando Xgboost para Multi-Label adapatado de https://gabrielziegler3.medium.com/multiclass-multilabel-classification-with-xgboost-66195e4d9f2d, aplicado a técnica de cross validation com 5 folds. 
 
 ## Descrição do Experimento
 O experimento segue as etapas descritas no artigo:
