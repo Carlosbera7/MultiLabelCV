@@ -35,7 +35,7 @@ O experimento foi implementado em Python 3.6 utilizando as bibliotecas:
 - XGBoost
 
 ## Divisão
-![trieino_teste](https://github.com/user-attachments/assets/43ef6433-f974-4f3f-a71b-e1fe0ddece95)
+![Figure_1](https://github.com/user-attachments/assets/68c0c1b8-f39d-49c1-abdc-1aa69297eabb)
 
 
 O script principal executa as seguintes etapas:
